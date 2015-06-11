@@ -1,0 +1,71 @@
+<style>
+    .btn-style{
+        position: absolute;
+        top: 20px;
+        right: 15px;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-12" style="position: relative">
+            <h2>About Me</h2>
+            <button class="btn btn-success btn-style" id="change" data-cn="true">English</button>
+            <hr/>
+            <div id="Cn">
+                <p>大家好，我叫马跃雷。生于1991年，研究生在读于北京信息科技大学，计算机学院。</p>
+                <br/>
+                <p>闲暇之余我爱好打篮球，dota，美剧（行尸走肉，生活大爆炸，权利的游戏），科技新闻。</p>
+                <br/>
+                <p>之前在铁甲工程机械网做java后端工程师（实习），熟悉主流java web开发框架。后来因为兴趣，转向
+                    前端开发，现在在美团移动前端组做前端工程师（实习）。</p>
+            </div>
+
+            <div id="En" style="display: none">
+                <p>My name is mayuelei.I was born in 1991, I am studying master's degree in BeiJing Science & Technology University
+                    ,Computer college.</p>
+                <br/>
+                <p>
+                    In my spare time, I like to play basketball,dota,watch America TV Series(The Walking Dead,The Big Bang Theory,
+                    Thrones Of Games),interest in technology news.
+                </p>
+                <br/>
+                <p>Once I worked in TieJia Engineering machinery Company as a Java RD（Internship）, I am familiar with java web framework.Because
+                    of interesting the FE technology,I become a FE RD.Now I am working in Meituan.com, Mobile FE group（Internship）. </p>
+            </div>
+            <br/>
+            <div class="share">
+                <h4>Links</h4>
+                <hr/>
+                <a href="http://weibo.com/u/1830601667/home?topnav=1&wvr=6" class="col-md-4" target="_blank">我的Sina微博</a>
+                <a href="https://twitter.com/john_910228" class="col-md-4" target="_blank">Twitter</a>
+                <a href="https://www.facebook.com/profile.php?id=100004153608090" class="col-md-4" target="_blank">FaceBook</a>
+            </div>
+            <br/>
+            <div>
+                <h4>Email</h4>
+                <hr/>
+                <p>mayuelei@126.com</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        $("#change").click(function(){
+            var cn = this.getAttribute("data-cn");
+            if(cn === "true"){
+                $("#Cn").hide();
+                $("#En").fadeIn();
+                this.setAttribute("data-cn","false");
+                this.innerText = "中文";
+            }else{
+                $("#En").hide();
+                $("#Cn").fadeIn();
+                this.setAttribute("data-cn","true");
+                this.innerText = "English";
+            }
+        });
+    });
+</script>
